@@ -1,0 +1,5 @@
+Delvar A If inString(Str7,Str1+":"
+Then
+	inString(Str7,Str1+":"->B
+	expr(sub(Str7,B-5,5->A
+End
