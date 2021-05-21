@@ -1,0 +1,7 @@
+Str7 = "00001*:00002WHO, ME?:00003SAY *:00004HELLO:00005HI:00006HOW ARE YOU:00007GOOD AND YOU?:"
+L1 = {3+1i, 1+2i, 4+5i, 6+7i 
+L2 = {8
+
+Str7 is all the inputs and outputs
+L1 is all of the strings in Str7 paired up
+and L2 is just the number of strings in Str7 plus one.
