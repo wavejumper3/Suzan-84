@@ -1,0 +1,12 @@
+If not(A
+Then
+	""->Str1
+	Return
+End
+{0,1->L3
+(A+|E5)Ans->L4
+LinReg(ax+b) L3, L4,{Y1}
+Equ>String({Y1},Str1
+sub(Str1,2,length(Str1)-4->Str1
+inString(Str7,Str1->A
+sub(Str7,A+5,inString(Str7,":",A)-5-A->Str1
