@@ -1,0 +1,94 @@
+Disp "ENTER CORRECT"
+Input ">",Str2
+Str9->Str1
+Delvar theta1->A
+" "->Str4
+Str2+" ->Str2
+Str1+" ->Str1
+{1->L3
+Delvar L While inString(Str2," ",A
+	theta+1->theta
+	inString(Str2," ",A->A
+	A->L3(theta+1
+	For(B,0,theta-1
+		L3(theta-B->C
+		If inString(Str1,sub(Str2,C,A-C+1
+		Then
+			If A-C>L
+			Then
+				C->L
+				sub(Str2,C,A-C+1->Str4
+			End
+		End
+	End
+	A+1->A
+End
+Str2->Str0
+For(theta,0,1
+	If Str4!=" "
+	Then
+		inString(Str1,Str4->A
+		length(Str1)-length(Str4->B
+		If not(B
+		Then
+			"*"->Str2
+			Return
+		End
+		If A=1
+		Then
+			"*"+sub(Str1,length(Str4),B->Str2
+		Else
+			If A=B+1
+			Then
+				sub(Str1,1,B)+"*->Str2
+			Else
+				sub(Str1,1,A-1)+"*"+sub(Str1,A+length(Str4),B-A->Str2
+			End
+		End
+		If " "=sub(Str2,length(Str2),1
+		sub(Str2,1,length(Str2)-1->Str2
+		If not(theta
+		Then
+			Str0->Str1
+			Str2->Str0
+			1->A
+		End
+	End
+End
+If " "=sub(Str1,length(Str1),1
+sub(Str1,1,length(Str1)-1->Str1
+If " "=sub(Str2,length(Str2),1
+sub(Str2,1,length(Str2)-1->Str2
+Str1->Str0
+Str2->Str1
+prgmZSTRR
+A->B
+Str0->Str1
+prgmZSTRR
+Str0->Str1
+For(theta,0,1
+	prgmZSTRR
+	If not(A
+	Then
+		L2(1->A
+		{0,1->L3
+		(A+|E5)Ans->L4
+		LinReg(ax+b) L3, L4,{Y1}
+		Equ>String({Y1},Str1
+		sub(Str1,2,length(Str1)-4->Str1
+		Str7+sub(Str4,1,5)+Str1+":->Str7
+		L2(1->A
+		A+1->L2(1
+	End
+	If not(theta
+	Then
+		A->C
+		Str2->Str1
+	End
+End
+C+A[i]->C
+Disp C
+If not(sum(L1=C
+Then
+	C->L1(1+dim(L1
+End
