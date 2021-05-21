@@ -1,0 +1,97 @@
+a+bi
+ClrHome
+If not(dim(L1)
+Then
+	"00001*:00002(NO RESPONSE):00003SAY *:->Str7
+	{3+[i],1+2[i]->L1L1L1L1L1L1L1L1
+	4->L2(1
+End
+""->Str1
+0->A
+Lbl A
+While 1
+	Input ">",Str0
+	If Str0="*
+	Then
+		prgmZLRN
+	Else
+		Str0->Str9
+		0->L
+		0->K
+		For(I,1,dim(L1
+			real(L1(I)->A
+			A-|E5iPart(A/|E5->A
+			prgmZSTR
+			Str1->Str2
+			" "->Str1
+			length(Str2->J
+			If not(inString(Str2,"*
+			Then
+				If Str2=Str0
+				1->A
+			Else
+				If J!=1
+				Then
+					inString(Str2,"*->B
+					If B-1
+					Then
+						J->C
+						sub(Str2,1,B-1->Str1
+						" ->Str3
+						If B!=C
+						sub(Str2,B+1,J-B->Str3
+						Str1->Str2
+					Else
+						sub(Str2,2,J-1->Str2
+					End
+					length(Str2->J
+					If inString(Str0,Str2
+					Then
+						1->A
+						inString(Str0,Str2->B
+						sub(Str0,B+J,length(Str0)-J-B+1->Str4
+					End
+					If Str3!=" " and not(inString(Str0,Str3
+					0->A
+					If Str3!=" " and A=1
+					sub(Str4,length(Str4)-length(Str3,length(Str3->Str4
+				Else
+					1->A
+				End
+			End
+			If A
+			Then
+				iPart(real(L1(I)/|E10->A
+				If J>K
+				Then
+					I->L
+					J->K
+				End
+			End
+		End
+		imag(L1(L))->A
+		A-|E5iPart(A/|E5->A
+		prgmZSTR
+		Str1->Str2
+		" "->Str1
+		inString(Str2,"*->A
+		length(Str2->B
+		If Str2="*
+		Then
+			Str4->Str2
+		Else
+			If A=1
+			Str4+sub(Str2,2,B-1->Str2
+			If A=B
+			sub(Str2,1,B-1)+Str4->Str2
+			If inString(Str2,":"
+			sub(Str2,1,A-1)+Str4+sub(Str2,A+1,B-A->Str2
+		End
+		1->A
+		While length(Str2)-A>16
+			Disp sub(Str2,A,A+15
+			A+16->A
+		End
+		Disp sub(Str2,A,length(Str2)-A+1
+		End
+	End
